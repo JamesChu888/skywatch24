@@ -1,0 +1,76 @@
+{
+    "movies": [
+      {
+        "title": "The Shawshank Redemption",
+        "director": "Frank Darabont",
+        "year": 1994,
+        "genre": "Drama",
+        "cast": [
+          {
+            "actor": "Tim Robbins",
+            "role": "Andy Dufresne"
+          },
+          {
+            "actor": "Morgan Freeman",
+            "role": "Ellis Boyd 'Red' Redding"
+          }
+        ],
+        "rating": 9.3,
+        "box_office": {
+          "budget": 25000000,
+          "gross": 28341469
+        }
+      },
+      {
+        "title": "The Dark Knight",
+        "director": "Christopher Nolan",
+        "year": 2008,
+        "genre": "Action, Crime, Drama",
+        "cast": [
+          {
+            "actor": "Christian Bale",
+            "role": "Bruce Wayne / Batman"
+          },
+          {
+            "actor": "Heath Ledger",
+            "role": "Joker"
+          },
+          {
+            "actor": "Aaron Eckhart",
+            "role": "Harvey Dent"
+          }
+        ],
+        "rating": 9.0,
+        "box_office": {
+          "budget": 185000000,
+          "gross": 1004558444
+        }
+      },
+      {
+        "title": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010,
+        "genre": "Action, Adventure, Sci-Fi",
+        "cast": [
+          {
+            "actor": "Leonardo DiCaprio",
+            "role": "Dom Cobb"
+          },
+          {
+            "actor": "Joseph Gordon-Levitt",
+            "role": "Arthur"
+          },
+          {
+            "actor": "Ellen Page",
+            "role": "Ariadne"
+          }
+        ],
+        "rating": 8.8,
+        "box_office": {
+          "budget": 160000000,
+          "gross": 829895144
+        }
+      }
+    ]
+  }
+  
