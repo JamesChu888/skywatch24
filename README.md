@@ -63,7 +63,7 @@ go test ./...
 
 ## 6. 改善空間
 
-* msgpack遇到map時, encode順序不固定, 所以跟ypack encode結果可能不同  
+* msgpack遇到map時, encode順序不固定, 所以跟mypack encode結果可能不同  
 * 使用goroutine加速 array, map的encode/decode  
 * 使用新版泛型T  
   
