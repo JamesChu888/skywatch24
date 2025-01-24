@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func Decode(buf *bytes.Reader) (interface{}, error) {
+func decode(buf *bytes.Reader) (interface{}, error) {
 	b, err := buf.ReadByte()
 	if err != nil {
 		return nil, err
@@ -237,7 +237,7 @@ func decodeArray(b byte, buf *bytes.Reader) (interface{}, error) {
 
 	array := make([]interface{}, length)
 	for i := 0; i < length; i++ {
-		item, err := Decode(buf)
+		item, err := decode(buf)
 		if err != nil {
 			return nil, err
 		}
@@ -279,11 +279,11 @@ func decodeMap(b byte, buf *bytes.Reader) (interface{}, error) {
 
 	mapping := make(map[string]interface{}, length)
 	for i := 0; i < length; i++ {
-		key, err := Decode(buf)
+		key, err := decode(buf)
 		if err != nil {
 			return nil, err
 		}
-		value, err := Decode(buf)
+		value, err := decode(buf)
 		if err != nil {
 			return nil, err
 		}

@@ -1,7 +1,6 @@
 package mypack
 
 import (
-	"bytes"
 	"reflect"
 	"testing"
 )
@@ -61,8 +60,7 @@ func TestMypack(t *testing.T) {
 			}
 
 			// 解碼
-			buf := bytes.NewReader(encoded)
-			decoded, err := Decode(buf)
+			decoded, err := Unmarshal(encoded)
 			if err != nil {
 				t.Fatalf("Decode failed: %v", err)
 			}

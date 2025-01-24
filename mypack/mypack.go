@@ -68,10 +68,10 @@ const (
 )
 
 func Marshal(input interface{}) ([]byte, error) {
-	return Encode(input)
+	return encode(input)
 }
 
 func Unmarshal(data []byte) (interface{}, error) {
 	buf := bytes.NewReader(data)
-	return Decode(buf)
+	return decode(buf)
 }

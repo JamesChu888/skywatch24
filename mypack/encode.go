@@ -7,7 +7,7 @@ import (
 	"reflect"
 )
 
-func Encode(input interface{}) ([]byte, error) {
+func encode(input interface{}) ([]byte, error) {
 	var buf bytes.Buffer
 
 	switch val := input.(type) {
@@ -173,7 +173,7 @@ func encodeArray(input []interface{}, buf *bytes.Buffer) {
 		binary.Write(buf, binary.BigEndian, uint32(length))
 	}
 	for _, item := range input {
-		itemEncoded, err := Encode(item)
+		itemEncoded, err := encode(item)
 		if err != nil {
 			panic(err)
 		}
@@ -194,13 +194,13 @@ func encodeMap(input map[string]interface{}, buf *bytes.Buffer) {
 		binary.Write(buf, binary.BigEndian, uint32(length))
 	}
 	for key, value := range input {
-		keyEncoded, err := Encode(key)
+		keyEncoded, err := encode(key)
 		if err != nil {
 			panic(err)
 		}
 		buf.Write(keyEncoded)
 
-		valueEncoded, err := Encode(value)
+		valueEncoded, err := encode(value)
 		if err != nil {
 			panic(err)
 		}
